@@ -5,7 +5,7 @@
 // for(let i = 0; i <= n; i++){
 //   arr.push(arr[i] + arr[i + 1]);
 // }
-
+ 
 // console.log(arr);
 
 let arr = [
@@ -13,7 +13,7 @@ let arr = [
     id: 1,
     name: 'AZIZs_KABLUK',
     budget: 500000,
-    tax: 21,
+    tax: 12,
     expensesPerYear: [
       {
         for: 'design',
@@ -31,9 +31,9 @@ let arr = [
   },
   {
     id: 2,
-    name: 'KAMERON_CINEMA',
+    name: 'KAMERON_CINEMA', 
     budget: 600000,
-    tax: 15,
+    tax: 12,
     expensesPerYear: [
       {
         for: 'camera',
@@ -73,7 +73,7 @@ let arr = [
     id: 4,
     name: 'AMINs_SOOOO',
     budget: 800000,
-    tax: 32,
+    tax: 23,
     expensesPerYear: [
       {
         for: 'house',
@@ -101,21 +101,26 @@ for (let item of arr) { // цикл чтобы достать каждый ай�
   for (let itemTwo of item.expensesPerYear) { // раскрываем расходы каждой компании (за год) 
     item.expensesPerMonth += itemTwo.total / 12 // прибавляем каждый расход к общей сумме деленную на 12 
   }
-
+  
   item.expensesPerMonth += item.tax * budgetForMonth / 100
   // найти сумму алог за месяц 
   // прибавить его к расходам
   // ...............................
-
+  
   item.percent = Math.round(item.expensesPerMonth * 100 / budgetForMonth) + "%" // создаем новй ключ процент 
   // присваиваем к нему соотношение трат к месячному бьджету и округляем
 
-//1
-    item.percent > 70 ? success.push(item) : unsuccess.push(item)
- 
+
+  //1
+  item.percent > "70%" ? success.push(item) : unsuccess.push(item)
+
 
 }
 
-console.table(arr, );
 
-console.log(success, unsuccess);
+console.log(success, unsuccess)
+
+
+
+
+console.table(arr);
